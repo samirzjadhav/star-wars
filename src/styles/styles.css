@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #03123d;
+  --secondary: #4d5875;
+  --accent: #cb1a80;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-[var(--bg-color)] text-white;
+}
+
+.main {
+  @apply flex flex-row gap-[32px];
+}
+
+.header {
+  @apply flex justify-between items-center p-[20px];
+}
+
+.logo {
+  @apply flex;
+}
+
+.search {
+  @apply flex items-center justify-center border border-white rounded p-[6px];
+}
+
+.icon {
+  @apply w-[24px] h-[24px];
+}
+
+.search-input-icon {
+  @apply ml-2;
+}
+
+.search-input {
+  @apply text-lg ml-1 font-normal leading-5 border-none rounded outline-none bg-[#03123d] placeholder:text-white w-[200px];
+}
+
+.toggle-icon {
+  @apply m-[20px] md:hidden;
+}
+
+.title {
+  @apply text-lg font-normal leading-4;
+}
+
+.sidebar {
+  @apply hidden md:flex bg-[var(--bg-color)];
+  @apply w-full md:max-w-[200px] px-[16px] flex-col gap-[10px];
+  @apply absolute md:static;
+  @apply top-[80px] left-0 z-10 h-full;
+}
+
+.sidebar-item {
+  @apply flex items-center justify-between py-[8px] px-[12px] cursor-pointer rounded;
+}
+
+.sidebar-item:hover {
+  @apply bg-[var(--accent)];
+}
+
+.sidebar-item-text {
+  @apply flex;
+}
+
+.sidebar-item-icon {
+  @apply mr-[12px];
+}
+
+.content {
+  @apply flex flex-col w-full;
+}
+
+.hero-container {
+  @apply w-[100%] h-[60vh] flex flex-col justify-center items-center;
+}
+
+.hero {
+  @apply bg-white rounded p-[24px] max-w-[600px];
+}
+
+.list-header {
+  @apply hidden justify-between p-[20px];
+}
+
+.items-list {
+  @apply hidden p-[20px];
+}
+
+table {
+  @apply w-full;
+}
+
+.list-header-title {
+  @apply text-2xl;
+}
+
+.table-header {
+  @apply bg-[var(--secondary)];
+}
+
+thead {
+  text-align: left !important;
+}
+
+th,
+td {
+  @apply text-left py-[16px] px-[24px]
+}
+
+.movie-title {
+  @apply flex items-center;
+}
+
+.release-date {
+  @apply flex justify-between items-center;
+}
+
+tbody tr {
+  border-bottom: 2px solid white;
+}
+
+tbody img {
+  margin-right: 10px;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+.items-grid {
+  @apply hidden flex-wrap gap-[12px] p-[20px];
+}
+
+.grid-item-container {
+  @apply flex-grow;
+}
+
+.info {
+  @apply bg-[var(--secondary)];
+  @apply items-center my-[8px] p-[12px] rounded flex justify-between;
+}
+
+.title {
+  @apply flex gap-[12px] items-center;
+}
+
+.options {
+  @apply relative;
+}
+
+.options-container {
+  @apply absolute top-0 right-0 bg-white text-black rounded  flex-row gap-[4px] hidden;
+}
+
+.options-content {
+  @apply p-[8px] w-[200px];
+}
+
+.options-content > li {
+  @apply flex p-[4px] rounded;
+}
+
+.options-content > li > img {
+  @apply mr-[8px]
+}
+
+.options-content > li:hover {
+  @apply bg-slate-100;
+}
+
+.delete-btn > a {
+  @apply text-red-500;
+}
+
+.button {
+  @apply flex flex-grow py-[10px] px-[18px] justify-center items-center rounded-md;
+}
+
+.delete-button {
+  @apply bg-red-400 border border-red-400 text-white px-[20px];
+}
+
+.cancel-button {
+  @apply border border-gray-400 text-black;
+}
+
+
+.modal{
+  @apply hidden justify-center items-center fixed top-0 right-0 w-full h-full bg-black bg-opacity-40 z-10;
+}
+
+.modal-content{
+  @apply  bg-white rounded-md text-black p-[24px] mt-[-200px] flex flex-col w-[400px];
+}
+
+.warning-icon{
+  @apply  w-[64px] h-[64px];
+}
+
+.modal-body{
+  @apply mt-[12px];
+}
+
+.modal-title{
+  @apply text-xl;
+}
+
+.modal-subtitle{
+  @apply text-gray-500 mt-[8px];
+}
+
+.modal-footer {
+  @apply mt-[32px] flex justify-between gap-[8px];
+}
+
+.view-section {
+  @apply h-screen flex flex-col justify-between p-[12px] max-w-[500px];
+}
+
+.view-header {
+  @apply flex justify-between mb-[12px] py-[16px] px-[20px];
+}
+
+.view-title {
+  @apply text-xl text-white;
+}
+
+.view-content {
+  @apply p-[10px];
+}
+
+.view-box {
+  @apply mt-[16px];
+}
+
+.view-sub-title {
+  @apply text-white text-sm mb-[8px] font-normal;
+}
+
+.view-area{
+  @apply resize-none py-[10px] px-[16px]
+}
+
+.view-input {
+  @apply outline-none p-[12px] border rounded-lg w-full placeholder:text-lg text-black;
+}
+
+.view-btn {
+  @apply py-[12px] px-[16px] mt-3 mb-[20px] flex justify-center items-center w-full bg-[#CB1A80] text-lg text-white font-semibold rounded-lg;
+}
+
+.header-border {
+  @apply border-b-[2px] border-white;
+}
+
+.view-footer{
+  @apply px-[10px] pt-[20px] pb-[26px]
+ }
+
+.footer-border {
+  @apply border-t-[2px]  border-white;
+}
+
+.cover {
+  @apply rounded object-cover w-full h-auto;
+}

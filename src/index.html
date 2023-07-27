@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Star Wars!</title>
+    <meta name="description" content="Basic HTML/Tailwind starter" />
+    <meta name="author" content="Daily Dev Tips" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/compiled.css" />
+    <link rel="stylesheet" href="./styles/switch.css" />
+    <script src="./scripts/index.js" async defer></script>
+  </head>
+  <body>
+    <nav class="header">
+      <div class="logo">
+        <a href="/">
+          <img src="./assets/logo.svg" alt="" />
+        </a>
+      </div>
+      <div class="search">
+        <img src="./assets/search.svg" class="icon search-input-icon" alt="" />
+        <input type="text" placeholder="Search" class="search-input" />
+      </div>
+    </nav>
+
+    <div class="toggle-icon">
+      <img src="./assets/ham.svg" class="icon" alt="" />
+    </div>
+
+    <section class="main">
+      <ul class="sidebar">
+        <li class="sidebar-item" data-type="films" id="films">
+          <h4 class="sidebar-item-text">
+            <img
+              src="./assets/folder.svg"
+              class="icon sidebar-item-icon"
+              alt="folder svg"
+            />
+            Films
+          </h4>
+          <img src="./assets/caret-right.svg" class="icon" alt="" />
+        </li>
+        <li class="sidebar-item" data-type="peoples">
+          <h4 class="sidebar-item-text">
+            <img
+              src="./assets/folder.svg"
+              class="icon sidebar-item-icon"
+              alt="folder svg"
+            />
+            People
+          </h4>
+          <img src="./assets/caret-right.svg" class="icon" alt="" />
+        </li>
+        <li class="sidebar-item" data-type="planets">
+          <h4 class="sidebar-item-text">
+            <img
+              src="./assets/folder.svg"
+              class="icon sidebar-item-icon"
+              alt="folder svg"
+            />
+            Planets
+          </h4>
+          <img src="./assets/caret-right.svg" class="icon" alt="" />
+        </li>
+        <li class="sidebar-item" data-type="species">
+          <h4 class="sidebar-item-text">
+            <img
+              src="./assets/folder.svg"
+              class="icon sidebar-item-icon"
+              alt="folder svg"
+            />
+            Species
+          </h4>
+          <img src="./assets/caret-right.svg" class="icon" alt="" />
+        </li>
+        <li class="sidebar-item" data-type="starships">
+          <h4 class="sidebar-item-text">
+            <img
+              src="./assets/folder.svg"
+              class="icon sidebar-item-icon"
+              alt="folder svg"
+            />
+            Starships
+          </h4>
+          <img src="./assets/caret-right.svg" class="icon" alt="" />
+        </li>
+        <li class="sidebar-item" data-type="vehicles">
+          <h4 class="sidebar-item-text">
+            <img
+              src="./assets/folder.svg"
+              class="icon sidebar-item-icon"
+              alt="folder svg"
+            />
+            Vehicles
+          </h4>
+          <img src="./assets/caret-right.svg" class="icon" alt="" />
+        </li>
+      </ul>
+
+      <div class="content">
+        <div class="hero-container">
+          <div class="hero">
+            <img src="./assets/hero.png" class="hero-image" alt="" />
+            <div class="mt-[20px]">
+              <h2 class="hero-title text-black mt-[12px]">
+                Welcome to Star Wars Dashboard
+              </h2>
+              <p class="hero-discription text-black">
+                Star Wars is an American epic space opera multimedia franchise
+                created by George Lucas, which began with the eponymous 1977
+                film and quickly became a worldwide pop culture phenomenon.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-header">
+          <h3 class="list-header-title">Films</h3>
+          <div class="list-view-switch">
+            <label class="switch">
+              <input type="checkbox" id="view-toggle" />
+              <div class="slider round">
+                <span class="on">List</span>
+                <span class="off">Grid</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- <div class="view-section h-screen">
+          <div class="view-container">
+            <div class="view-header header-border">
+              <h1 class="view-title">Movie Details</h1>
+              <img src="./assets/close.svg" class="icon" alt="" />
+            </div>
+
+            <div class="view-content">
+              <div class="mb-4">
+                <p class="view-sub-title">image</p>
+                <img src="./assets/hero.png" class="rounded" />
+              </div>
+              <div class="view-box">
+                <p class="view-sub-title">Title</p>
+                <input type="text" placeholder="star wars" class="view-input" />
+              </div>
+              <div class="view-box">
+                <p class="view-sub-title">Opening Crawl</p>
+                <textarea
+                  name="Opening Crawl"
+                  id=""
+                  placeholder="Lorem ipsum dolor sit amet consectetur. Sit."
+                  class="view-input"
+                ></textarea>
+              </div>
+              <div class="view-box">
+                <p class="view-sub-title">Genere</p>
+                <input
+                  type="text"
+                  placeholder="Super hero"
+                  class="view-input"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="view-footer footer-border">
+            <button class="view-btn">Close</button>
+          </div>
+        </div> -->
+
+        <div class="items-list">
+          <table>
+            <thead class="table-header">
+              <th>Name</th>
+              <th>Director</th>
+              <th>Release Date</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="items-grid"></div>
+      </div>
+    </section>
+
+    <div class="modal">
+      <div class="modal-content">
+        <div>
+          <img src="./assets/warning.svg" class="warning-icon" alt="" />
+        </div>
+        <div class="modal-body">
+          <h1 class="modal-title">Caution!</h1>
+          <p class="modal-subtitle">
+            Are you sure to delete <span>$NAME</span>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="button cancel-button">Cancel</button>
+          <button class="button delete-button">Yes</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
